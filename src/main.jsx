@@ -15,7 +15,7 @@ import Ipl from "./components/IPL/Ipl.jsx";
 import World from "./components/WorldNews/WorldNews.jsx";
 import Politics from "./components/Politics/Politics.jsx";
 import CountryNews from "./components/CountryNews/CountryNews";
-
+import App from "./App";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,12 +66,18 @@ const router = createBrowserRouter([
         path: "/politics",
         element: <Politics />,
       },
+      {
+        path: "business",
+        element: <Politics />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>
 );

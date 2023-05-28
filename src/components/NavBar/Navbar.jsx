@@ -5,12 +5,17 @@ import { NavLink, Navigate, useNavigate } from "react-router-dom";
 import Drop from "../DropDown/DropDown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
-import { useState } from "react";
-import BreadCrumb from "../BreadCrumb/BreadCrumb";
+import { useState, useEffect } from "react";
 
 function Navbar2() {
-  const [isActive, setIsActive] = useState("home");
-  const navigate = useNavigate();
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
   return (
     <>
       <Navbar id="navbar">
@@ -21,7 +26,6 @@ function Navbar2() {
                 className="imgg-24"
                 alt=""
                 src="../../public/icons/test.png"
-                srcset=""
               />
             </Navbar.Brand>
           </div>
@@ -58,6 +62,13 @@ function Navbar2() {
               </NavLink>
 
               <NavLink
+                to="business"
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                Business
+              </NavLink>
+
+              <NavLink
                 to="politics"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
@@ -67,6 +78,7 @@ function Navbar2() {
           </div>
           <div className="section2">
             <Drop />
+            <button onClick={toggleTheme}> Dark</button>
           </div>
         </Container>
       </Navbar>

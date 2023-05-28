@@ -1,4 +1,7 @@
 .img-24 {
   height: 5rem;
-   border-radius: 50%;
+  border-radius: 50%;
+}
+.footer-bg{
+  background-color: #27374D;
 }

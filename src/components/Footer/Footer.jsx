@@ -4,10 +4,10 @@ import "./Footer.css";
 export default function Footer() {
   return (
     <>
-      <div className="d-flex justify-content-around bg-dark text-light mt-2">
+      <div className="d-flex justify-content-around footer-bg text-light mt-2">
         <div className="fourth p-2">
           <div className="col">
-            <div className="row">
+            <div className="row-sm-12 row-md-4 row-lg-3">
               <a href="/">
                 <img
                   src="../../public/icons/test.png"
@@ -22,27 +22,49 @@ export default function Footer() {
         <div className="first p-2">
           <div className="col">
             <div className="row display-5 mb-2">Home</div>
-            <div className="row">Application</div>
-            <div className="row">Documentation</div>
-            <div className="row">APIs</div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Application</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Documentation</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>APIs</p>
+            </div>
           </div>
         </div>
         <div className="second p-2">
           <div className="col">
             <div className="row display-5 mb-2">Company</div>
-            <div className="row">About us</div>
-            <div className="row">Blog</div>
-            <div className="row">Careers</div>
-            <div className="row">Press</div>
+            <div className="row-sm-12 row-md-4 row-lg-3 ">
+              <p>About us</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Blog</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Careers</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Press</p>
+            </div>
           </div>
         </div>
         <div className="third p-2">
           <div className="col">
             <div className="row display-5 mb-2">Social</div>
-            <div className="row">Facebook</div>
-            <div className="row">Twitter</div>
-            <div className="row">Instagram</div>
-            <div className="row">LinkedIn</div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Facebook</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Twitter</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>Instagram</p>
+            </div>
+            <div className="row-sm-12 row-md-4 row-lg-3">
+              <p>LinkedIn</p>
+            </div>
           </div>
         </div>
       </div>

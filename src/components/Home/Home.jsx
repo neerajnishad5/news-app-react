@@ -18,7 +18,7 @@ export default function Home() {
         <div className="row ms-auto me-auto">
           {headlines?.map((headline, index) => {
             return (
-              <div className="col">
+              <div className="col-sm-12 col-md-4 col-lg-3">
                 <Card2
                   key={index}
                   title={headline.title}

@@ -4,7 +4,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 export const Headlines = async () => {
   try {
     const data = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=in&pageSize=20&apiKey=${apiKey}`
     );
     const realData = data.data;
     return realData.articles;
@@ -17,7 +17,7 @@ export const Headlines = async () => {
 export const TechHeadlines = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?sources=techcrunch&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -29,7 +29,7 @@ export const TechHeadlines = async () => {
 export const IplNews = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=ipl&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=ipl&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -41,7 +41,7 @@ export const IplNews = async () => {
 export const WorldNews = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=world-news&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=world-news&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -53,7 +53,7 @@ export const WorldNews = async () => {
 export const IndiaNews = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=india&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=india&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -65,7 +65,7 @@ export const IndiaNews = async () => {
 export const PoliticalNews = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=politics&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=politics&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -77,7 +77,21 @@ export const PoliticalNews = async () => {
 export const countrySpecificNews = async (country) => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=${country}&apiKey=${apiKey}`
+      `https://newsapi.org/v2/everything?q=${country}&pageSize=20&apiKey=${apiKey}`
+    );
+
+    return res.data.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+
+export const businessNews = async () => {
+  try {
+    const res = await axios.get(
+      `https://newsapi.org/v2/everything?q=business&pageSize=20&apiKey=${apiKey}`
     );
 
     return res.data.articles;

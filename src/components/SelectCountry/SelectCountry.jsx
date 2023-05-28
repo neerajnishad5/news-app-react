@@ -19,6 +19,10 @@ export default function SelectCountry() {
         navigate("russia");
         break;
 
+        case "england":
+        navigate("england");
+        break;
+
       default:
         navigate("/");
         break;

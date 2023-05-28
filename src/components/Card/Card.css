@@ -5,5 +5,17 @@
 #btn {
   border-radius: 0px;
   text-decoration: none;
-  background-color: rgb(44, 24, 117);
+  background-color: #27374d;
+ }
+#btn:hover {
+  background-color: #afbed4;
+  color: black;
+}
+
+.read{
+  text-decoration: none;
+  color: white;
+}
+.read:hover {
+   color: black;
 }

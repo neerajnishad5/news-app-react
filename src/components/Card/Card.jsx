@@ -9,7 +9,12 @@ function Card2({ title, description, source, url, urlToImage }) {
       className="card"
       style={{ width: "18rem", height: "20rem", backgroundColor: "#cbe4f4" }}
     >
-      <Card.Img variant="top" src={urlToImage} />
+      <Card.Img style={{
+        maxWidth: "15rem",
+        textAlign: "center",
+        margin: "5px auto",
+        borderRadius: "0px"
+      }} variant="top" src={urlToImage} />
       <Card.Body
         style={{
           overflow: "auto",
@@ -23,8 +28,8 @@ function Card2({ title, description, source, url, urlToImage }) {
         >
           {description}
         </Card.Text>
-        <Button id="btn" variant="primary">
-          <a target="_blank" className="text-light" href={url}>
+        <Button id="btn" >
+          <a target="_blank" className="read" href={url}>
             Read more
           </a>
         </Button>
