@@ -13,8 +13,7 @@ function Navbar2() {
       <Navbar id="navbar" bg="dark" variant="dark">
         <Container className="d-flex justify-content-between">
           <div className="section1 ">
-            {/* <Navbar.Brand href="/">24xNews</Navbar.Brand> */}
-            <Nav>
+             <Nav>
               <Navbar.Brand href="/">24xNews</Navbar.Brand>
               <Nav.Link onClick={() => navigate("/india")}>India</Nav.Link>
               <Nav.Link onClick={() => navigate("/world")}>World</Nav.Link>
