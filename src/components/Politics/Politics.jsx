@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { IndiaNews } from "../../apiCalls";
+import { PoliticalNews } from "../../apiCalls";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
-export default function India() {
+
+function Politics() {
   const [headlines, setHeadlines] = useState([]);
 
   useEffect(() => {
-    IndiaNews().then((res) => {
+    PoliticalNews().then((res) => {
       setHeadlines(res);
 
       console.log(res);
@@ -37,3 +38,4 @@ export default function India() {
     </div>
   );
 }
+export default Politics;

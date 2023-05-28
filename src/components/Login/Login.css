@@ -3,4 +3,16 @@
   margin-right: auto;
   width: 20rem;
   padding: 20px;
- }
+  border: solid 5px #27374d;
+  border-radius: 4px;
+}
+
+.btn-form {
+  background-color: #27374d;
+  color: white;
+  margin-top: 8px;
+}
+
+.form-label {
+  margin: 4px auto;
+}

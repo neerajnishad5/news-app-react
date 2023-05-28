@@ -8,16 +8,12 @@ export default function Home() {
   useEffect(() => {
     Headlines().then((res) => {
       setHeadlines(res);
-
-      console.log(res);
     });
   }, []);
 
   return (
     <div>
-      <div className="heading ms-3 me-3 bg-success p-2 mb-2">
-        <h2>Home</h2>
-      </div>
+      
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines?.map((headline, index) => {

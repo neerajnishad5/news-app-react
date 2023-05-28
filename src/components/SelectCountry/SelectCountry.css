@@ -1,0 +1,21 @@
+.country-form {
+  background-color: #bbd4ea;
+  width: 50%;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.form-select {
+  width: auto;
+}
+
+.btn-input {
+  background-color: #27374d;
+  color: white;
+  margin-top: 8px;
+}
+
+.label {
+  font-weight: bold;
+}

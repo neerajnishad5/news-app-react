@@ -1,0 +1,20 @@
+.inactive,
+.active {
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: white;
+  padding: 7px;
+}
+
+.inactive:hover,
+.active:hover {
+  background-color: #9db2bf;
+  color: black;
+  border-radius: 7px;
+}
+
+.active {
+  border-radius: 10px;
+  background-color: #9db2bf;
+}

@@ -1,6 +1,6 @@
 import axios from "axios";
 const apiKey = import.meta.env.VITE_API_KEY;
- 
+
 export const Headlines = async () => {
   try {
     const data = await axios.get(
@@ -50,15 +50,38 @@ export const WorldNews = async () => {
   }
 };
 
-
 export const IndiaNews = async () => {
-    try {
-      const res = await axios.get(
-        `https://newsapi.org/v2/everything?q=india&apiKey=${apiKey}`
-      );
-  
-      return res.data.articles;
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const res = await axios.get(
+      `https://newsapi.org/v2/everything?q=india&apiKey=${apiKey}`
+    );
+
+    return res.data.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const PoliticalNews = async () => {
+  try {
+    const res = await axios.get(
+      `https://newsapi.org/v2/everything?q=politics&apiKey=${apiKey}`
+    );
+
+    return res.data.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const countrySpecificNews = async (country) => {
+  try {
+    const res = await axios.get(
+      `https://newsapi.org/v2/everything?q=${country}&apiKey=${apiKey}`
+    );
+
+    return res.data.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};

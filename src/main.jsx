@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/RootLayout/RootLayout.jsx";
@@ -14,6 +13,8 @@ import Register from "./components/Register/Register.jsx";
 import Home from "./components/Home/Home.jsx";
 import Ipl from "./components/IPL/Ipl.jsx";
 import World from "./components/WorldNews/WorldNews.jsx";
+import Politics from "./components/Politics/Politics.jsx";
+import CountryNews from "./components/CountryNews/CountryNews";
 
 const router = createBrowserRouter([
   {
@@ -50,12 +51,20 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/ipl",
+        path: "ipl",
         element: <Ipl />,
       },
       {
-        path: "/world",
+        path: "world",
         element: <World />,
+      },
+      {
+        path: "/world/:countryname",
+        element: <CountryNews />,
+      },
+      {
+        path: "/politics",
+        element: <Politics />,
       },
     ],
   },

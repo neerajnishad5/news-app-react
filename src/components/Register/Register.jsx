@@ -54,7 +54,7 @@ export default function Register() {
             {...register("password")}
           />
         </div>
-        <input className="btn btn-dark " type={"submit"} />
+        <input className="btn btn-form " type={"submit"} />
       </form>
     </div>
   );

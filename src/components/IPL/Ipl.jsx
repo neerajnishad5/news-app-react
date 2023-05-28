@@ -15,9 +15,7 @@ function Ipl() {
 
   return (
     <div>
-      <div className="heading ms-3 me-3 bg-success p-2 mb-2">
-        <h2>IPL Updates</h2>
-      </div>
+     
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines.map((headline, index) => {

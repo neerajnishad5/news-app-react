@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "./Login.css"
+import "./Login.css";
 
 export default function Login() {
   const {
@@ -39,7 +39,7 @@ export default function Login() {
             {...register("password")}
           />
         </div>
-        <input className="btn btn-dark " type={"submit"} />
+        <input className="btn btn-form " type={"submit"} />
       </form>
     </div>
   );

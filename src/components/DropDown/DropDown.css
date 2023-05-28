@@ -1,4 +1,7 @@
-#dropdown-basic-button {
-  background-color: yellow;
-  color: black;
+#dropdown-button {
+  background-color: #526d82;
+  color: white;
+  border: #526D82;
+  width: 3rem;
+  border-radius: 0px;
 }

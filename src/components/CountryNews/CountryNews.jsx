@@ -1,22 +1,26 @@
-import { useEffect, useState } from "react";
-import { IndiaNews } from "../../apiCalls";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useState, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
+import { countrySpecificNews } from "../../apiCalls";
 import Card2 from "../Card/Card";
-export default function India() {
+
+export default function CountryNews() {
+  const params = useParams();
+  const country = params.countryname.toUpperCase();
   const [headlines, setHeadlines] = useState([]);
+  //   console.log(params.countryname);
 
   useEffect(() => {
-    IndiaNews().then((res) => {
+    countrySpecificNews().then((res) => {
       setHeadlines(res);
-
       console.log(res);
     });
   }, []);
 
   return (
     <div>
-      
+      <div className="heading ms-3 me-3 bg-success p-2 mb-2">
+        <h2>{country} News</h2>
+      </div>
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines.map((headline, index) => {

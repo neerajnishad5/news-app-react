@@ -1,25 +1,68 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Navigate, useNavigate } from "react-router-dom";
+import { NavLink, Navigate, useNavigate } from "react-router-dom";
 import Drop from "../DropDown/DropDown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
+import { useState } from "react";
+import BreadCrumb from "../BreadCrumb/BreadCrumb";
 
 function Navbar2() {
+  const [isActive, setIsActive] = useState("home");
   const navigate = useNavigate();
   return (
     <>
-      <Navbar id="navbar" bg="dark" variant="dark">
+      <Navbar id="navbar">
         <Container className="d-flex justify-content-between">
+          <div className="section3">
+            <Navbar.Brand id="brand" href="/">
+              <img
+                className="imgg-24"
+                alt=""
+                src="../../public/icons/test.png"
+                srcset=""
+              />
+            </Navbar.Brand>
+          </div>
           <div className="section1 ">
-             <Nav>
-              <Navbar.Brand href="/">24xNews</Navbar.Brand>
-              <Nav.Link onClick={() => navigate("/india")}>India</Nav.Link>
-              <Nav.Link onClick={() => navigate("/world")}>World</Nav.Link>
-              {/* <Nav.Link onClick={() => navigate("/opinion")}>Opinion</Nav.Link> */}
-              <Nav.Link onClick={() => navigate("/ipl")}>IPL 2023</Nav.Link>
-              <Nav.Link onClick={() => navigate("/tech")}>Technology</Nav.Link>
+            <Nav>
+              <NavLink
+                to="india"
+                className={({ isActive }) =>
+                  isActive ? "active " : "inactive"
+                }
+              >
+                India
+              </NavLink>
+
+              <NavLink
+                to="world"
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                World
+              </NavLink>
+
+              <NavLink
+                to="ipl"
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                IPL2023
+              </NavLink>
+
+              <NavLink
+                to="tech"
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                Tech
+              </NavLink>
+
+              <NavLink
+                to="politics"
+                className={({ isActive }) => (isActive ? "active" : "inactive")}
+              >
+                Politics
+              </NavLink>
             </Nav>
           </div>
           <div className="section2">

@@ -3,6 +3,7 @@ import { WorldNews } from "../../apiCalls";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
+import SelectCountry from "../SelectCountry/SelectCountry";
 
 function World() {
   const [headlines, setHeadlines] = useState([]);
@@ -10,16 +11,12 @@ function World() {
   useEffect(() => {
     WorldNews().then((res) => {
       setHeadlines(res);
-
-      console.log(res);
     });
   }, []);
 
   return (
     <div>
-      <div className="heading ms-3 me-3 bg-success p-2 mb-2">
-        <h2>World News</h2>
-      </div>
+      <SelectCountry />
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines.map((headline, index) => {
