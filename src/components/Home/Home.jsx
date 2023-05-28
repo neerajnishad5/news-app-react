@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Headlines } from "../../apiCalls";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
       </div>
       <div className="text-center">
         <div className="row ms-auto me-auto">
-          {headlines.map((headline, index) => {
+          {headlines?.map((headline, index) => {
             return (
               <div className="col">
                 <Card2
