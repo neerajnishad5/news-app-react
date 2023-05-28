@@ -1,0 +1,9 @@
+#card-title {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#btn{
+    border-radius: 0px;
+    text-decoration: none;
+    background-color: rgb(44, 24, 117);
+}
