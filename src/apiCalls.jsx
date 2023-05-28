@@ -1,9 +1,10 @@
 import axios from "axios";
-
+const apiKey = import.meta.env.VITE_API_KEY;
+ 
 export const Headlines = async () => {
   try {
     const data = await axios.get(
-      "https://newsapi.org/v2/top-headlines?country=in&apiKey=7da1e770f3fd44f78c71b5b5943ff808"
+      `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`
     );
     const realData = data.data;
     return realData.articles;
@@ -16,7 +17,7 @@ export const Headlines = async () => {
 export const TechHeadlines = async () => {
   try {
     const res = await axios.get(
-      "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=7da1e770f3fd44f78c71b5b5943ff808"
+      `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -28,7 +29,7 @@ export const TechHeadlines = async () => {
 export const IplNews = async () => {
   try {
     const res = await axios.get(
-      "https://newsapi.org/v2/everything?q=ipl&apiKey=7da1e770f3fd44f78c71b5b5943ff808"
+      `https://newsapi.org/v2/everything?q=ipl&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -40,7 +41,7 @@ export const IplNews = async () => {
 export const WorldNews = async () => {
   try {
     const res = await axios.get(
-      "https://newsapi.org/v2/everything?q=world-news&apiKey=7da1e770f3fd44f78c71b5b5943ff808"
+      `https://newsapi.org/v2/everything?q=world-news&apiKey=${apiKey}`
     );
 
     return res.data.articles;
@@ -53,7 +54,7 @@ export const WorldNews = async () => {
 export const IndiaNews = async () => {
     try {
       const res = await axios.get(
-        "https://newsapi.org/v2/everything?q=india&apiKey=7da1e770f3fd44f78c71b5b5943ff808"
+        `https://newsapi.org/v2/everything?q=india&apiKey=${apiKey}`
       );
   
       return res.data.articles;
