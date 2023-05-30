@@ -16,6 +16,7 @@ import World from "./components/WorldNews/WorldNews.jsx";
 import Politics from "./components/Politics/Politics.jsx";
 import CountryNews from "./components/CountryNews/CountryNews";
 import App from "./App";
+import ExpandNews from "./components/ExpandNews/ExpandNews";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <App />,
       },
       {
         path: "/india",
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: "business",
         element: <Politics />,
+      },
+      {
+        path: ":title",
+        element: <ExpandNews />,
       },
     ],
   },

@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./Login.css";
+const clientId = import.meta.env.VITE_CLIENT_ID;
+import { gapi } from "gapi-script";
+import AuthLogin from "../AuthLogin";
+import ToggleButton from "../ToggleButton/ToggleButton";
+import ScrollBar from "../ScrollBar/ScrollBar";
 
 export default function Login() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => console.log(data);
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    }
+  }, []);
 
   return (
     <div className="form">
+      <h2 className="mb-3 text-center">Login</h2>
+      <div className="d-flex justify-content-center">
+        <AuthLogin />
+      </div>
+      <hr />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="login">
           <label className="form-label" htmlFor="login" id="name">

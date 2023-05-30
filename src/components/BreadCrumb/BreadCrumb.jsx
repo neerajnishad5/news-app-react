@@ -6,25 +6,17 @@ export default function BreadCrumb() {
 
   // help/contact --> help | contact
 
-  let currentLink = "";
-
-  const crumbs = location.pathname
-    .split("/")
-    .filter((crumb) => crumb !== "")
-    .map((crumb) => {
-      currentLink += "/${crumb}";
-
-      return (
-        <div className="crumb" key={crumb}>
-          <Link to={currentLink}>{crumb}</Link>
-        </div>
-      );
-    });
-
   return (
-    <div className="breadcrumbs" style={{ backgroundColor: "#bbd4ea", border: "2px solid #9db2bf" }}>
-      <p>Home {">"} </p>
-      {crumbs}
+    <div className="breadcrumbs" style={{ backgroundColor: "#bbd4ea" }}>
+      <p>
+        <a className="text-decoration-none" href="/">
+          Home{" "}
+        </a>
+        <span>
+          {">"}
+          {location.pathname.replace(/%20/g, " ").slice(1).toUpperCase()}
+        </span>{" "}
+      </p>
     </div>
   );
 }

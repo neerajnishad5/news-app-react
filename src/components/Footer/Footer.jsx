@@ -23,13 +23,13 @@ export default function Footer() {
           <div className="col">
             <div className="row display-5 mb-2">Home</div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Application</p>
+              <a href="/">Application</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Documentation</p>
+              <a href="/">Documentation</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>APIs</p>
+              <a href="/">APIs</a>
             </div>
           </div>
         </div>
@@ -37,16 +37,16 @@ export default function Footer() {
           <div className="col">
             <div className="row display-5 mb-2">Company</div>
             <div className="row-sm-12 row-md-4 row-lg-3 ">
-              <p>About us</p>
+              <a href="/">About us</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Blog</p>
+              <a href="/">Blog</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Careers</p>
+              <a href="/">Careers</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Press</p>
+              <a href="/">Press</a>
             </div>
           </div>
         </div>
@@ -54,16 +54,16 @@ export default function Footer() {
           <div className="col">
             <div className="row display-5 mb-2">Social</div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Facebook</p>
+              <a href="/">Facebook</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Twitter</p>
+              <a href="/">Twitter</a>
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>Instagram</p>
+              <a href="/">Instagram</a>{" "}
             </div>
             <div className="row-sm-12 row-md-4 row-lg-3">
-              <p>LinkedIn</p>
+              <a href="/">LinkedIn</a>
             </div>
           </div>
         </div>

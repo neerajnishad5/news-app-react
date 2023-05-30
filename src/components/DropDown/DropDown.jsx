@@ -3,7 +3,8 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./DropDown.css";
-function Drop() {
+ 
+export default function Drop() {
   const navigate = useNavigate();
   return (
     <DropdownButton className="btn" id="dropdown-button">
@@ -14,5 +15,3 @@ function Drop() {
     </DropdownButton>
   );
 }
-
-export default Drop;

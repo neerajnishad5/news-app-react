@@ -7,18 +7,21 @@ import BreadCrumb from "../BreadCrumb/BreadCrumb";
 import "./RootLayout.css";
 
 export default function RootLayout() {
-  const params = useLocation().pathname;
+  let params = useLocation().pathname;
   console.log("Params", params);
+  console.log(params);
   return (
     <div className="root-layout">
       <Navbar2 />
       <BreadCrumb />
       <div className="heading   p-2 mb-2">
-        {params.length > 1 && (
-          <h2>{params.slice(1).charAt(0).toUpperCase() + params.slice(2)}</h2>
-        )}
+        {params.length > 1 &&
+          params.slice(1) !== "login" && params.length < 10 &&
+          params.slice(1) !== "register" && (
+            <h2>{params.slice(1).charAt(0).toUpperCase() + params.slice(2)}</h2>
+          )}
       </div>
-      <div className="mt-3 rounded" style={{ minHeight: "62vh" }}>
+      <div className="outlet mt-3 rounded" style={{ minHeight: "62vh" }}>
         <Outlet />
       </div>
       <Footer />

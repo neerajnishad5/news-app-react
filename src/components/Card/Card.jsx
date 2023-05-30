@@ -2,24 +2,56 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Card.css";
+import { useNavigate } from "react-router-dom";
 
-function Card2({ title, description, source, url, urlToImage }) {
+function Card2({
+  title,
+  description,
+  source,
+  url,
+  urlToImage,
+  content,
+  publishedAt,
+  author,
+}) {
+  // const redirect = () => {
+  //   location.href = url;
+  // };
+  const navigate = useNavigate();
+  console.log(source);
+
   return (
     <Card
+      onClick={() =>
+        navigate(`/${title}`, {
+          state: {
+            title: title,
+            urlToImage: urlToImage,
+            content: content,
+            author: author,
+            publishedAt: publishedAt,
+            description: description,
+            source: source,
+            url: url,
+          },
+        })
+      }
       className="card"
       style={{ width: "18rem", height: "20rem", backgroundColor: "#cbe4f4" }}
     >
-      <Card.Img style={{
-        maxWidth: "15rem",
-        textAlign: "center",
-        margin: "5px auto",
-        borderRadius: "0px"
-      }} variant="top" src={urlToImage} />
-      <Card.Body
+      <Card.Img
+      className="card-img"
         style={{
-          overflow: "auto",
+          maxWidth: "15rem",
+          textAlign: "center",
+          margin: "5px auto",
+          borderRadius: "0px",
         }}
-      >
+        variant="top"
+        src={urlToImage}
+      />
+      <hr />
+      <Card.Body className="card-body">
         <Card.Title id="card-title">{title}</Card.Title>
         <Card.Text
           style={{
@@ -28,11 +60,6 @@ function Card2({ title, description, source, url, urlToImage }) {
         >
           {description}
         </Card.Text>
-        <Button id="btn" >
-          <a target="_blank" className="read" href={url}>
-            Read more
-          </a>
-        </Button>
       </Card.Body>
     </Card>
   );

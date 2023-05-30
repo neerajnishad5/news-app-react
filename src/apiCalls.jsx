@@ -8,7 +8,42 @@ export const Headlines = async () => {
     );
     const realData = data.data;
     return realData.articles;
-    console.log("real data", realData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const TrendingHeadlines = async () => {
+  try {
+    const data = await axios.get(
+      `https://newsapi.org/v2/top-headlines?country=in&sortBy=popularity&pageSize=4&apiKey=${apiKey}`
+    );
+    const realData = data.data;
+    return realData.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const PopularNews = async () => {
+  try {
+    const data = await axios.get(
+      `https://newsapi.org/v2/top-headlines?q=trend&sortBy=popularity&pageSize=4&apiKey=${apiKey}`
+    );
+    const realData = data.data;
+    return realData.articles;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const ViralNews = async () => {
+  try {
+    const data = await axios.get(
+      `https://newsapi.org/v2/top-headlines?q=viral&sortBy=popularity&pageSize=4&apiKey=${apiKey}`
+    );
+    const realData = data.data;
+    return realData.articles;
   } catch (error) {
     console.log(error);
   }
@@ -85,8 +120,6 @@ export const countrySpecificNews = async (country) => {
     console.log(error);
   }
 };
-
-
 
 export const businessNews = async () => {
   try {

@@ -28,6 +28,10 @@ function World() {
                   urlToImage={headline.urlToImage}
                   url={headline.url}
                   description={headline.description}
+                  author={headline.author}
+                  publishedAt={headline.publishedAt}
+                  content={headline.content}
+                  source={headline.source}
                 />
               </div>
             );

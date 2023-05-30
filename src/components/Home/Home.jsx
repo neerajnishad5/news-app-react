@@ -13,7 +13,6 @@ export default function Home() {
 
   return (
     <div>
-      
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines?.map((headline, index) => {
@@ -25,6 +24,10 @@ export default function Home() {
                   urlToImage={headline.urlToImage}
                   url={headline.url}
                   description={headline.description}
+                  author={headline.author}
+                  publishedAt={headline.publishedAt}
+                  content={headline.content}
+                  source={headline.source}
                 />
               </div>
             );

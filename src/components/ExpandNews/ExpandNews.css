@@ -1,0 +1,36 @@
+.source-name,
+.title,
+.author-name {
+  color: #27374d;
+  font-weight: bold;
+}
+
+.author-name {
+  margin-top: 5px;
+}
+.read-more {
+  padding: 5px;
+  background-color: #9dc7e7;
+  cursor: pointer;
+  text-decoration: none;
+  color: #27374d;
+  /* border: #27374D 2px solid; */
+  border-radius: 5px;
+}
+.news-content,
+.title,
+.description {
+  /* width: 70%; */
+  margin-bottom: 5px;
+}
+.headline-image {
+  width: 90%;
+  display: block;
+}
+.ssrcss-jlwt2c-Divider {
+  background-color: #8a8c8e;
+  width: 2.5rem;
+  height: 0.125rem;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}

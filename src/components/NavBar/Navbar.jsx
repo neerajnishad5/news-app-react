@@ -1,13 +1,14 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { NavLink, Navigate, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Drop from "../DropDown/DropDown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
+import ToggleButton from "../ToggleButton/ToggleButton";
 
-function Navbar2() {
+export default function Navbar2() {
   const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
@@ -19,7 +20,7 @@ function Navbar2() {
   return (
     <>
       <Navbar id="navbar">
-        <Container className="d-flex justify-content-between">
+        <Container className="d-flex flex-row justify-content-between">
           <div className="section3">
             <Navbar.Brand id="brand" href="/">
               <img
@@ -76,14 +77,17 @@ function Navbar2() {
               </NavLink>
             </Nav>
           </div>
-          <div className="section2">
-            <Drop />
-            <button onClick={toggleTheme}> Dark</button>
+          <div className="section2 d-flex flex-col">
+            <div className="col1">
+              <Drop />
+            </div>
+
+            <div className="col2" onClick={toggleTheme}>
+              <ToggleButton />
+            </div>
           </div>
         </Container>
       </Navbar>
     </>
   );
 }
-
-export default Navbar2;

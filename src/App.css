@@ -9,12 +9,12 @@
   margin-right: auto;
 }
 
-.dark {
-  background-color: #333;
-  color: #fff;
+.dark > .outlet {
+  background-color: #27374d !important;
+  color: #fff !important;
 }
 
-.light {
-  background-color: #fff;
-  color: #333;
+.dark {
+  color: white;
 }
+ 

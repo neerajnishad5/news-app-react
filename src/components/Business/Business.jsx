@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { businessNews } from "../../apiCalls";
 import Card2 from "../Card/Card";
 
-
 function Business() {
   const [headlines, setHeadlines] = useState([]);
 
@@ -28,6 +27,10 @@ function Business() {
                 urlToImage={headline.urlToImage}
                 url={headline.url}
                 description={headline.description}
+                author={headline.author}
+                publishedAt={headline.publishedAt}
+                content={headline.content}
+                source={headline.source}
               />
             </div>
           );

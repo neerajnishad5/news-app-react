@@ -14,8 +14,7 @@ function Ipl() {
   }, []);
 
   return (
-    <div>
-     
+    <div>     
       <div className="text-center">
         <div className="row ms-auto me-auto">
           {headlines.map((headline, index) => {
@@ -27,6 +26,7 @@ function Ipl() {
                   urlToImage={headline.urlToImage}
                   url={headline.url}
                   description={headline.description}
+                  
                 />
               </div>
             );
