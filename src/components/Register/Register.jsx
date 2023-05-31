@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import "./Register.css";
 import GoogleSignInIcon from "../GoogleSignInIcon/GoogleSignInIcon";
 import AuthLogin from "../AuthLogin";
+import { Helmet } from "react-helmet";
 
 export default function Register() {
   const {
@@ -15,6 +16,13 @@ export default function Register() {
 
   return (
     <div className="form">
+      <div>
+            <Helmet>
+              <title>
+                Register | 24xNews
+              </title>
+            </Helmet>
+          </div>
       <h2 className="mb-3 text-center">Register</h2>
       <div className="d-flex justify-content-center">
         <AuthLogin action={"Sign up with Google"} />

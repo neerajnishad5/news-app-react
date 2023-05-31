@@ -4,6 +4,9 @@ import Spinner from "../Spinner/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 import SelectCountry from "../SelectCountry/SelectCountry";
+import QuickLinks from "../QuickLinks/QuickLinks";
+import { Helmet } from 'react-helmet';
+
 
 function World() {
   const [headlines, setHeadlines] = useState([]);
@@ -11,6 +14,7 @@ function World() {
 
   useEffect(() => {
     setSpinner(true);
+
     WorldNews().then((res) => {
       setHeadlines(res);
       setSpinner(false);
@@ -30,7 +34,21 @@ function World() {
         </div>
       ) : (
         <div>
-          <SelectCountry />
+          <div>
+            <Helmet>
+              <title>
+                World News | 24xNews
+              </title>
+            </Helmet>
+          </div>
+          <div className="row justify-content-around mb-3">
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <SelectCountry />
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-4">
+              <QuickLinks />
+            </div>
+          </div>
           <div className="text-center">
             <div className="row ms-auto me-auto ">
               {headlines.map((headline, index) => {

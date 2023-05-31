@@ -3,6 +3,7 @@ import { PoliticalNews } from "../../apiCalls";
 import Spinner from "../Spinner/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
+import { Helmet } from "react-helmet";
 
 function Politics() {
   const [headlines, setHeadlines] = useState([]);
@@ -32,6 +33,13 @@ function Politics() {
         </div>
       ) : (
         <div className="text-center">
+          <div>
+            <Helmet>
+              <title>
+                India | 24xNews
+              </title>
+            </Helmet>
+          </div>
            <div className="row ms-auto me-auto ">
             {headlines.map((headline, index) => {
               return (

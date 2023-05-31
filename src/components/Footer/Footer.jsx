@@ -67,6 +67,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
+      </div> 
+      <div className="footer-copyright text-center">
+        <footer>Copyright © 2023 24xNews Ltd All Rights Reserved</footer>
       </div>
     </>
   );

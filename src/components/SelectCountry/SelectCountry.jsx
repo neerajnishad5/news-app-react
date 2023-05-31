@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "./SelectCountry.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function SelectCountry() {
   const { register, handleSubmit } = useForm();
@@ -10,18 +11,34 @@ export default function SelectCountry() {
     console.log(countryName);
     switch (countryName) {
       case "us":
-        navigate("us");
+        navigate("america", {
+          state: {
+            country: "us",
+          },
+        });
         break;
-      case "china":
-        navigate("china");
+      case "ch":
+        navigate("china", {
+          state: {
+            country: "ch",
+          },
+        });
         break;
 
-      case "russia":
-        navigate("russia");
+      case "ru":
+        navigate("russia", {
+          state: {
+            country: "ru",
+          },
+        });
         break;
 
-        case "england":
-        navigate("england");
+      case "nz":
+        navigate("new-zealand", {
+          state: {
+            country: "nz",
+          },
+        });
         break;
 
       default:
@@ -31,17 +48,20 @@ export default function SelectCountry() {
   };
 
   return (
-    <form className="country-form" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="country-form d-flex flex-row justify-content-center "
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <div className="select-country">
         <label htmlFor="country" className="form-label label">
-          Find news by country
+          <h3 className="heading">Find news by country</h3>
         </label>
         <select className="form-control form-select" {...register("country")}>
           <option selected>-- Select Country --</option>
-          <option value="america">USA</option>
-          <option value="china">China</option>
-          <option value="russia">Russia</option>
-          <option value="england">UK</option>
+          <option value="us">USA</option>
+          <option value="ch">China</option>
+          <option value="ru">Russia</option>
+          <option value="nz">New Zealand</option>
         </select>
         <input className="btn btn-input" type="submit" />
       </div>

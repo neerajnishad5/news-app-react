@@ -118,7 +118,7 @@ export const PoliticalNews = async () => {
 export const countrySpecificNews = async (country) => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=${country}&pageSize=20&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=${country}&pageSize=20&apiKey=${apiKey}`
     );
     responses.push(res.data.articles);
     return res.data.articles;

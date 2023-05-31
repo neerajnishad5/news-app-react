@@ -1,9 +1,9 @@
 .country-form {
   background-color: #bbd4ea;
-  width: 50%;
   padding: 10px;
   margin-left: 10px;
   margin-bottom: 10px;
+  height: 100%;
 }
 
 .form-select {
@@ -18,4 +18,9 @@
 
 .label {
   font-weight: bold;
+}
+
+.heading {
+  /* font-weight: 600; */
+  color: #27374d;
 }

@@ -5,12 +5,14 @@ import Card2 from "../Card/Card";
 
 export default function CountryNews() {
   const params = useParams();
+  const { state } = useLocation();
+  console.log(state?.country);
   const country = params.countryname.toUpperCase();
   const [headlines, setHeadlines] = useState([]);
   //   console.log(params.countryname);
 
   useEffect(() => {
-    countrySpecificNews().then((res) => {
+    countrySpecificNews(state?.country).then((res) => {
       setHeadlines(res);
       console.log(res);
     });

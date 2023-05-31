@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { businessNews } from "../../apiCalls";
 import Card2 from "../Card/Card";
 import Spinner from "../Spinner/Spinner";
+import { Helmet } from "react-helmet";
 
 export default function Business() {
   const [headlines, setHeadlines] = useState([]);
@@ -30,6 +31,13 @@ export default function Business() {
         </div>
       ) : (
         <div className="text-center">
+          <div>
+            <Helmet>
+              <title>
+                India | 24xNews
+              </title>
+            </Helmet>
+          </div>
           <div className="row ms-auto me-auto ">
             {headlines.map((headline, index) => {
               return (

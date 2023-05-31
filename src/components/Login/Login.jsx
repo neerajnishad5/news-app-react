@@ -6,6 +6,7 @@ import { gapi } from "gapi-script";
 import AuthLogin from "../AuthLogin";
 import ToggleButton from "../ToggleButton/ToggleButton";
 import ScrollBar from "../ScrollBar/ScrollBar";
+import { Helmet } from "react-helmet";
 
 export default function Login() {
   const {
@@ -27,6 +28,13 @@ export default function Login() {
 
   return (
     <div className="form">
+       <div>
+            <Helmet>
+              <title>
+                Login | 24xNews
+              </title>
+            </Helmet>
+       </div>
       <h2 className="mb-3 text-center">Login</h2>
       <div className="d-flex justify-content-center">
         <AuthLogin />

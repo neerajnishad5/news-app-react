@@ -3,6 +3,8 @@ import { IndiaNews } from "../../apiCalls";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 import Spinner from "../Spinner/Spinner";
+import { Helmet } from 'react-helmet';
+
 export default function India() {
   const [headlines, setHeadlines] = useState([]);
   const [spinner, setSpinner] = useState(false);
@@ -28,6 +30,13 @@ export default function India() {
         </div>
       ) : (
         <div className="text-center">
+          <div>
+            <Helmet>
+              <title>
+                India | 24xNews
+              </title>
+            </Helmet>
+          </div>
            <div className="row ms-auto me-auto ">
             {headlines.map((headline, index) => {
               return (
