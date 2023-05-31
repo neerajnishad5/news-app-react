@@ -3,9 +3,6 @@ import "./BreadCrumb.css";
 
 export default function BreadCrumb() {
   const location = useLocation();
-
-  // help/contact --> help | contact
-
   return (
     <div className="breadcrumbs" style={{ backgroundColor: "#bbd4ea" }}>
       <p>

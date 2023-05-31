@@ -1,5 +1,11 @@
 #navbar {
-  background-color: #27374d;
+  background-color: rgba(39, 55, 77);
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0px 8px 8px -6px rgba(0, 0, 0, 0.5);
 }
 #brand {
   color: white;
@@ -9,9 +15,6 @@
   background-color: #bbd4ea;
   border-radius: 50%;
 }
-.col2{
+.col2 {
   margin: auto 0px;
- }
-
-
- 
+}
