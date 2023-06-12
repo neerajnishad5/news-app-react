@@ -8,13 +8,12 @@ import "./RootLayout.css";
 
 export default function RootLayout() {
   let params = useLocation().pathname;
-  console.log("Params", params);
-  console.log(params);
+  console.log("Params", params); 
   return (
     <div className="root-layout">
       <Navbar2 />
       <BreadCrumb />
-      <div className="heading   p-2 mb-2">
+      <div className="heading p-2 mb-2">
         {params.length > 1 &&
           params.slice(1) !== "login" && params.length < 10 &&
           params.slice(1) !== "register" && (

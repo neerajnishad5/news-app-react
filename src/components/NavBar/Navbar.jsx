@@ -49,10 +49,10 @@ export default function Navbar2() {
               </NavLink>
 
               <NavLink
-                to="ipl"
+                to="sports"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
-                IPL2023
+                Sports
               </NavLink>
 
               <NavLink
@@ -69,12 +69,12 @@ export default function Navbar2() {
                 Business
               </NavLink>
 
-              <NavLink
+              {/* <NavLink
                 to="politics"
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
               >
                 Politics
-              </NavLink>
+              </NavLink> */}
             </Nav>
           </div>
           <div className="section2 d-flex flex-col">

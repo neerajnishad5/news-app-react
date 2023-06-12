@@ -6,6 +6,7 @@ import Card2 from "../Card/Card";
 export default function CountryNews() {
   const params = useParams();
   const { state } = useLocation();
+  console.log("state hoon:: ",state);
   console.log(state?.country);
   const country = params.countryname.toUpperCase();
   const [headlines, setHeadlines] = useState([]);
@@ -22,7 +23,7 @@ export default function CountryNews() {
     <div>
       <div className="text-center">
         <div className="row ms-auto me-auto">
-          {headlines.map((headline, index) => {
+          {headlines?.map((headline, index) => {
             return (
               <div className="col">
                 <Card2

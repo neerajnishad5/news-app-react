@@ -4,12 +4,12 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
-} from "@chakra-ui/react";
+ } from "@chakra-ui/react";
 
 export default function BreadCrumb() {
   const { pathname } = useLocation();
-  const cleanLink = pathname.replace(/[^0-9a-z]/gi, "");
+  console.log(pathname);
+  const cleanLink = pathname.replace(/[^0-9a-z]/gi, "/ ");
   return (
     <div className="breadcrumbs">
       <Breadcrumb fontWeight="medium" fontSize="sm" backgroundColor={"#bbd4ea"}>

@@ -15,26 +15,24 @@ export default function Login() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
-
-  useEffect(() => {
+  const onSubmit = (data) => {
     function start() {
       gapi.client.init({
         clientId: clientId,
         scope: "",
       });
     }
-  }, []);
+  };
+
+  useEffect(() => {}, []);
 
   return (
     <div className="form">
-       <div>
-            <Helmet>
-              <title>
-                Login | 24xNews
-              </title>
-            </Helmet>
-       </div>
+      <div>
+        <Helmet>
+          <title>Login | 24xNews</title>
+        </Helmet>
+      </div>
       <h2 className="mb-3 text-center">Login</h2>
       <div className="d-flex justify-content-center">
         <AuthLogin />

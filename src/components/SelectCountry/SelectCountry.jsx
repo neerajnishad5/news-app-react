@@ -20,10 +20,10 @@ export default function SelectCountry() {
           },
         });
         break;
-      case "ch":
-        navigate("china", {
+      case "au":
+        navigate("australia", {
           state: {
-            country: "ch",
+            country: "au",
           },
         });
         break;
@@ -36,10 +36,10 @@ export default function SelectCountry() {
         });
         break;
 
-      case "nz":
-        navigate("new-zealand", {
+      case "fr":
+        navigate("france", {
           state: {
-            country: "nz",
+            country: "fr",
           },
         });
         break;
@@ -62,9 +62,9 @@ export default function SelectCountry() {
         <select className="form-control form-select" {...register("country")}>
           <option selected>-- Select Country --</option>
           <option value="us">USA</option>
-          <option value="ch">China</option>
+          <option value="au">Australia</option>
           <option value="ru">Russia</option>
-          <option value="nz">New Zealand</option>
+          <option value="fr">France</option>
         </select>
         <input className="btn btn-input" type="submit" />
       </div>

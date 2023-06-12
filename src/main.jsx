@@ -11,7 +11,7 @@ import Opinion from "./components/Opinion/Opinion.jsx";
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 import Home from "./components/Home/Home.jsx";
-import Ipl from "./components/IPL/Ipl.jsx";
+import Sports from "./components/Sports/Sports.jsx";
 import World from "./components/WorldNews/WorldNews.jsx";
 import Politics from "./components/Politics/Politics.jsx";
 import CountryNews from "./components/CountryNews/CountryNews";
@@ -49,8 +49,8 @@ const router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "ipl",
-        element: <Ipl />,
+        path: "sports",
+        element: <Sports />,
       },
       {
         path: "world",
