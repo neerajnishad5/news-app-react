@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { ChakraProvider } from "@chakra-ui/react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/RootLayout/RootLayout.jsx";
 import ErrorPage from "./components/ErrorPage/Errorpage.jsx";
 import India from "./components/India/India.jsx";
-import US from "./components/US/US.jsx";
 import Tech from "./components/Tech/Tech.jsx";
 import Opinion from "./components/Opinion/Opinion.jsx";
 import Login from "./components/Login/Login.jsx";
@@ -31,10 +31,7 @@ const router = createBrowserRouter([
         path: "/india",
         element: <India />,
       },
-      {
-        path: "/us",
-        element: <US />,
-      },
+
       {
         path: "/tech",
         element: <Tech />,
@@ -82,7 +79,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router}>
-      <App />
+      <ChakraProvider>
+        <App />
+      </ChakraProvider>
     </RouterProvider>
   </React.StrictMode>
 );

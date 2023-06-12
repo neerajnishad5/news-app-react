@@ -4,6 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 import Spinner from "../Spinner/Spinner";
 import { Helmet } from "react-helmet";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from '@chakra-ui/react'
 
 export default function Home() {
   const [headlines, setHeadlines] = useState([]);

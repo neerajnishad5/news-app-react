@@ -1,10 +1,9 @@
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
-function Card2({
+export default function Card2({
   title,
   description,
   source,
@@ -14,11 +13,7 @@ function Card2({
   publishedAt,
   author,
 }) {
-  // const redirect = () => {
-  //   location.href = url;
-  // };
   const navigate = useNavigate();
-  console.log(source);
 
   return (
     <Card
@@ -40,7 +35,7 @@ function Card2({
       style={{ width: "18rem", height: "20rem", backgroundColor: "#cbe4f4" }}
     >
       <Card.Img
-      className="card-img"
+        className="card-img"
         style={{
           maxWidth: "15rem",
           textAlign: "center",
@@ -64,5 +59,3 @@ function Card2({
     </Card>
   );
 }
-
-export default Card2;

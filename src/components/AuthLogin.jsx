@@ -2,7 +2,7 @@ import GoogleLogin from "@leecheuk/react-google-login";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 
-function AuthLogin({ action }) {
+export default function AuthLogin({ action }) {
   const onSuccess = (res) => {
     console.log("LOGIN SUCCESSFUL! Current user: ", res.profileObj);
   };
@@ -22,5 +22,3 @@ function AuthLogin({ action }) {
     </div>
   );
 }
-
-export default AuthLogin;

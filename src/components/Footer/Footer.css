@@ -2,7 +2,7 @@
   height: 5rem;
   border-radius: 50%;
   /* border: 2px solid white; */
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .footer-bg {
   background-color: #27374d;
@@ -15,7 +15,12 @@
   margin: 5px 0px;
 }
 
-.footer-copyright{
+.footer-copyright {
   background: #27374d;
   color: white;
+}
+
+.fourth {
+  display: flex;
+  align-items: center;
 }

@@ -3,9 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "./SelectCountry.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+import { useState } from "react";
+
 export default function SelectCountry() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
+
   const onSubmit = (data) => {
     const countryName = data.country;
     console.log(countryName);

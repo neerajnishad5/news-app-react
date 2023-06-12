@@ -3,7 +3,7 @@ import { IndiaNews } from "../../apiCalls";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 import Spinner from "../Spinner/Spinner";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 export default function India() {
   const [headlines, setHeadlines] = useState([]);
@@ -13,7 +13,7 @@ export default function India() {
     setSpinner(true);
     IndiaNews().then((res) => {
       setHeadlines(res);
-       setSpinner(false);
+      setSpinner(false);
     });
   }, []);
 
@@ -32,13 +32,11 @@ export default function India() {
         <div className="text-center">
           <div>
             <Helmet>
-              <title>
-                India | 24xNews
-              </title>
+              <title>India | 24xNews</title>
             </Helmet>
           </div>
-           <div className="row ms-auto me-auto ">
-            {headlines.map((headline, index) => {
+          <div className="row ms-auto me-auto ">
+            {headlines?.map((headline, index) => {
               return (
                 <div className="col-sm-6 col-md-4 col-lg-3">
                   <Card2

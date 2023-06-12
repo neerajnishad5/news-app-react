@@ -1,19 +1,28 @@
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./BreadCrumb.css";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from "@chakra-ui/react";
 
 export default function BreadCrumb() {
-  const location = useLocation();
+  const { pathname } = useLocation();
+  const cleanLink = pathname.replace(/[^0-9a-z]/gi, "");
   return (
-    <div className="breadcrumbs" style={{ backgroundColor: "#bbd4ea" }}>
-      <p>
-        <a className="text-decoration-none" href="/">
-          Home{" "}
-        </a>
-        <span>
-          {">"}
-          {location.pathname.replace(/%20/g, " ").slice(1).toUpperCase()}
-        </span>{" "}
-      </p>
+    <div className="breadcrumbs">
+      <Breadcrumb fontWeight="medium" fontSize="sm" backgroundColor={"#bbd4ea"}>
+        <BreadcrumbItem>
+          <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+
+        <BreadcrumbItem isCurrentPage>
+          <BreadcrumbLink href={cleanLink}>
+            {cleanLink.toUpperCase()}
+          </BreadcrumbLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
     </div>
   );
 }

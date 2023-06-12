@@ -94,9 +94,9 @@ export const WorldNews = async () => {
 export const IndiaNews = async () => {
   try {
     const res = await axios.get(
-      `https://newsapi.org/v2/everything?q=india&pageSize=20&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=in&pageSize=20&apiKey=${apiKey}`
     );
-    responses.push(res.data.articles);
+    // responses.push(res.data.articles);
     return res.data.articles;
   } catch (error) {
     console.log(error);
