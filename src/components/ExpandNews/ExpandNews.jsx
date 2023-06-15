@@ -55,7 +55,7 @@ export default function ExpandNews() {
         <div className="col-3 text-start">
           <div className="trending-headlines">
             <h2>Trending</h2>
-            {trendingHeadlines.map((headline, index) => {
+            {trendingHeadlines?.map((headline, index) => {
               return (
                 <Card2
                   key={index}
@@ -73,7 +73,7 @@ export default function ExpandNews() {
           </div>
           <div className="trending-headlines">
             <h2>Features</h2>
-            {popularNews.map((headline, index) => {
+            {popularNews?.map((headline, index) => {
               return (
                 <Card2
                   key={index}
@@ -91,7 +91,7 @@ export default function ExpandNews() {
           </div>
           <div className="trending-headlines">
             <h2>Viral News</h2>
-            {viralNews.map((headline, index) => {
+            {viralNews?.map((headline, index) => {
               return (
                 <Card2
                   key={index}
