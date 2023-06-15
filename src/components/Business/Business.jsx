@@ -33,27 +33,23 @@ export default function Business() {
         <div className="text-center">
           <div>
             <Helmet>
-              <title>
-                India | 24xNews
-              </title>
+              <title>India | 24xNews</title>
             </Helmet>
           </div>
-          <div className="row ms-auto me-auto ">
-            {headlines.map((headline, index) => {
+          <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4 tw-justify-center tw-align-middle">
+            {headlines?.map((headline, index) => {
               return (
-                <div className="col-sm-6 col-md-4 col-lg-3">
-                  <Card2
-                    key={index}
-                    title={headline.title}
-                    urlToImage={headline.urlToImage}
-                    url={headline.url}
-                    description={headline.description}
-                    author={headline.author}
-                    publishedAt={headline.publishedAt}
-                    content={headline.content}
-                    source={headline.source}
-                  />
-                </div>
+                <Card2
+                  key={index}
+                  title={headline.title}
+                  urlToImage={headline.urlToImage}
+                  url={headline.url}
+                  description={headline.description}
+                  author={headline.author}
+                  publishedAt={headline.publishedAt}
+                  content={headline.content}
+                  source={headline.source}
+                />
               );
             })}
           </div>

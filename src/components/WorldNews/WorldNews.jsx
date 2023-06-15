@@ -5,8 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card2 from "../Card/Card";
 import SelectCountry from "../SelectCountry/SelectCountry";
 import QuickLinks from "../QuickLinks/QuickLinks";
-import { Helmet } from 'react-helmet';
-
+import { Helmet } from "react-helmet";
 
 function World() {
   const [headlines, setHeadlines] = useState([]);
@@ -36,9 +35,7 @@ function World() {
         <div>
           <div>
             <Helmet>
-              <title>
-                World News | 24xNews
-              </title>
+              <title>World News | 24xNews</title>
             </Helmet>
           </div>
           <div className="row justify-content-around mb-3">
@@ -50,7 +47,7 @@ function World() {
             </div>
           </div>
           <div className="text-center">
-            <div className="row ms-auto me-auto ">
+            <div className="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-4 tw-justify-center tw-align-middle">
               {headlines.map((headline, index) => {
                 return (
                   <div className="col-sm-6 col-md-4 col-lg-3">

@@ -20,13 +20,14 @@ export default function Navbar2() {
   return (
     <>
       <Navbar id="navbar">
-        <Container className="d-flex flex-row justify-content-between">
+        <Container className="d-flex  flex-row justify-content-between">
           <div className="section3">
             <Navbar.Brand id="brand" href="/">
               <img
-                className="imgg-24"
+                className="tw-w-10 md:tw-w-14 tw-bg-white tw-rounded"
+                src="../src/icons/test.png"
                 alt=""
-                src="../../public/icons/test.png"
+                srcset=""
               />
             </Navbar.Brand>
           </div>
